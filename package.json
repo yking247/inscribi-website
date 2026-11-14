@@ -1,0 +1,27 @@
+{
+  "name": "inscribi-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "verify:export": "node scripts/verify-export.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.6",
+    "typescript": "5.9.3"
+  },
+  "description": "Inscribi informational website for GitHub Pages"
+}
