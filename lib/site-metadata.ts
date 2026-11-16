@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 export const siteUrl = 'https://www.inscribi.app';
+export const appStoreUrl = 'https://apps.apple.com/gb/app/inscribi/id6816372000';
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {
   return {

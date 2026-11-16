@@ -39,6 +39,7 @@ Review GitHub Pages' commercial-use restrictions before changing this site's
 informational purpose:
 https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
 
-Store links must refer to verified public listings. The current beta contact is
-retained until public distribution is confirmed; no simulated store buttons
-are included.
+The verified public iPhone listing is
+https://apps.apple.com/gb/app/inscribi/id6816372000. Shared navigation, homepage,
+feature and pricing calls to action, and footer links use this official listing.
+Android remains in testing; no public Google Play listing is advertised.

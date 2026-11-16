@@ -3,6 +3,7 @@ import { SiteImage as Image } from '@/components/site-image';
 import type { SVGProps } from 'react';
 import { SiteShell } from '@/components/site-shell';
 import { ScrollReveal } from '@/components/scroll-reveal';
+import { appStoreUrl } from '@/lib/site-metadata';
 
 type FeatureIconName = 'edit' | 'diamond' | 'book' | 'image' | 'memory' | 'moon' | 'people' | 'search';
 
@@ -39,7 +40,7 @@ export default function HomePage() {
         <div className="hero-brand-lockup"><h1>Inscribi</h1></div>
         <p className="hero-subtitle">Your living notes library.</p>
         <p className="hero-body">Capture the moment. Keep sermons, Bible studies, Gems and reflections beautifully organised — and rediscover what matters later.</p>
-        <div className="actions"><a className="button primary" href="mailto:support@inscribi.app?subject=Inscribi%20private%20beta">Join the beta</a><Link className="text-link" href="/features">Explore features <span aria-hidden>›</span></Link></div>
+        <div className="actions"><a className="button primary" href={appStoreUrl}>Download on the App Store</a><Link className="text-link" href="/features">Explore features <span aria-hidden>›</span></Link></div>
       </div>
       <div className="hero-panel app-home-panel"><Image src="/images/home-in-use.png" alt="Inscribi demo Home screen shown on a phone at a writing desk" fill priority sizes="(max-width: 800px) 100vw, 42vw" /></div>
     </ScrollReveal>
@@ -49,6 +50,6 @@ export default function HomePage() {
       <div className="feature-grid">{features.map((feature, index) => <ScrollReveal as="article" delay={index * 55} className={`feature-card feature-card-${feature.tone}`} key={feature.title}><div className="feature-icon"><FeatureIcon name={feature.icon} /></div><h3>{feature.title}</h3><p>{feature.copy}</p></ScrollReveal>)}</div>
     </ScrollReveal>
 
-    <ScrollReveal className="closing"><div><p className="eyebrow">A LIVING LIBRARY</p><h2>Make space for what you are learning.</h2><p>Inscribi is being shaped carefully in private beta, with a focus on useful writing, not more noise.</p><Link className="text-link" href="/support">Stay in touch <span aria-hidden>›</span></Link></div><div className="closing-glimpse"><Image src="/images/home-in-use.png" alt="Privacy-safe Inscribi demo Home screen" fill sizes="(max-width: 800px) 100vw, 360px" /></div></ScrollReveal>
+    <ScrollReveal className="closing"><div><p className="eyebrow">A LIVING LIBRARY</p><h2>Make space for what you are learning.</h2><p>Inscribi is now available on the App Store. A calm space to capture your writing and return to what matters.</p><a className="text-link" href={appStoreUrl}>Download on the App Store <span aria-hidden>›</span></a></div><div className="closing-glimpse"><Image src="/images/home-in-use.png" alt="Privacy-safe Inscribi demo Home screen" fill sizes="(max-width: 800px) 100vw, 360px" /></div></ScrollReveal>
   </SiteShell>;
 }
