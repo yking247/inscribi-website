@@ -10,11 +10,12 @@ for (const route of routes) {
   assert.match(html, /<html[^>]+lang="en-GB"/);
   assert.match(html, /<h1[ >]/);
   assert.equal((html.match(/<main[ >]/g) ?? []).length, 1, `${route}: expected one main landmark`);
-  assert.match(html, /support@inscribi\.app/);
+  assert.ok(html.includes(`href="${basePath}/support/"`), `${route}: public support link is missing`);
   assert.match(html, /https:\/\/www\.inscribi\.app/);
   assert.ok(!html.includes('/api/stripe'), `${route}: server payment route leaked into static site`);
   assert.ok(html.includes(`${basePath}/images/inscribi-logo-horizontal-transparent.png`));
 }
+assert.match(await readFile(path.join(root, 'support', 'index.html'), 'utf8'), /mailto:support@inscribi\.app/);
 assert.ok(!(await readdir(root)).includes('api'), 'Static deployment must not contain API endpoints');
 for (const file of ['404.html', 'robots.txt', 'sitemap.xml']) await readFile(path.join(root, file));
 for (const route of ['/privacy/', '/terms/', '/support/', '/delete-account/']) {
